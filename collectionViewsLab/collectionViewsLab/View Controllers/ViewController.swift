@@ -92,6 +92,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return CGSize(width: 374, height: 347)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let selectedCell = sender as! CountryCollectionViewCell
+        let index = (countryCollection.indexPath(for: selectedCell)?.row)!
+        if segue.identifier == "countrySegue" {
+            let destination = segue.destination as! CountryDetailViewController
+            destination.country = countries[index]
+        }
+    }
+    
     
 }
 

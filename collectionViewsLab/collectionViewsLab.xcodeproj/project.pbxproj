@@ -16,6 +16,11 @@
 		3A7FCF6B233D218600180DD2 /* collectionViewsLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF6A233D218600180DD2 /* collectionViewsLabTests.swift */; };
 		3A7FCF76233D218600180DD2 /* collectionViewsLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF75233D218600180DD2 /* collectionViewsLabUITests.swift */; };
 		3A7FCF84233D223F00180DD2 /* CountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF83233D223F00180DD2 /* CountryCollectionViewCell.swift */; };
+		3A7FCF86233D23AE00180DD2 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF85233D23AE00180DD2 /* CountryModel.swift */; };
+		3A7FCF88233D23DD00180DD2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF87233D23DD00180DD2 /* NetworkManager.swift */; };
+		3A7FCF8A233D23E200180DD2 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF89233D23E200180DD2 /* AppError.swift */; };
+		3A7FCF8C233D23E600180DD2 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF8B233D23E600180DD2 /* ImageManager.swift */; };
+		3A7FCF8E233D23F500180DD2 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FCF8D233D23F500180DD2 /* CountryAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		3A7FCF75233D218600180DD2 /* collectionViewsLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewsLabUITests.swift; sourceTree = "<group>"; };
 		3A7FCF77233D218600180DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7FCF83233D223F00180DD2 /* CountryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A7FCF85233D23AE00180DD2 /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		3A7FCF87233D23DD00180DD2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3A7FCF89233D23E200180DD2 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		3A7FCF8B233D23E600180DD2 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		3A7FCF8D233D23F500180DD2 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,11 @@
 				3A7FCF55233D218300180DD2 /* SceneDelegate.swift */,
 				3A7FCF57233D218300180DD2 /* ViewController.swift */,
 				3A7FCF83233D223F00180DD2 /* CountryCollectionViewCell.swift */,
+				3A7FCF87233D23DD00180DD2 /* NetworkManager.swift */,
+				3A7FCF89233D23E200180DD2 /* AppError.swift */,
+				3A7FCF8B233D23E600180DD2 /* ImageManager.swift */,
+				3A7FCF85233D23AE00180DD2 /* CountryModel.swift */,
+				3A7FCF8D233D23F500180DD2 /* CountryAPIClient.swift */,
 				3A7FCF59233D218300180DD2 /* Main.storyboard */,
 				3A7FCF5C233D218600180DD2 /* Assets.xcassets */,
 				3A7FCF5E233D218600180DD2 /* LaunchScreen.storyboard */,
@@ -262,10 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7FCF88233D23DD00180DD2 /* NetworkManager.swift in Sources */,
 				3A7FCF58233D218300180DD2 /* ViewController.swift in Sources */,
 				3A7FCF84233D223F00180DD2 /* CountryCollectionViewCell.swift in Sources */,
+				3A7FCF8C233D23E600180DD2 /* ImageManager.swift in Sources */,
 				3A7FCF54233D218300180DD2 /* AppDelegate.swift in Sources */,
+				3A7FCF8E233D23F500180DD2 /* CountryAPIClient.swift in Sources */,
 				3A7FCF56233D218300180DD2 /* SceneDelegate.swift in Sources */,
+				3A7FCF86233D23AE00180DD2 /* CountryModel.swift in Sources */,
+				3A7FCF8A233D23E200180DD2 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

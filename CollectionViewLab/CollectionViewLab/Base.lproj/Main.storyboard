@@ -85,6 +85,7 @@
                     <navigationItem key="navigationItem" id="5Bl-Ym-QcT"/>
                     <connections>
                         <outlet property="countryCollectionView" destination="rWs-FO-m1Q" id="cb8-se-HIA"/>
+                        <outlet property="countrySearchBar" destination="mVR-KM-vlL" id="Wkj-D3-FFR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,17 +12,42 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var countryCollectionView: UICollectionView!
     
+    @IBOutlet weak var countrySearchBar: UISearchBar!
+    
     var countries = [Country]() {
         didSet {
             countryCollectionView.reloadData()
         }
     }
     
+    var filteredCountries: [Country] {
+        get {
+            guard let searchString = searchString else {return countries}
+            guard searchString != "" else {return countries}
+            return Country.getFilteredResults(arr: countries, searchText: searchString)
+        }
+    }
+    
+    var searchString: String? = nil {
+        didSet {
+            self.countryCollectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        configureCollectionView()
+        configureSearchBar()
+    }
+    
+    private func configureCollectionView() {
         countryCollectionView.dataSource = self
         countryCollectionView.delegate = self
+    }
+    
+    private func configureSearchBar() {
+        countrySearchBar.delegate = self
     }
     
     private func loadData() {
@@ -43,7 +68,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return countries.count
+        return filteredCountries.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -51,7 +76,7 @@ extension ViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        let country = countries[indexPath.row]
+        let country = filteredCountries[indexPath.row]
         cell.nameLabel.text = country.name
         
         ImageHelper.shared.getImage(urlStr: CountryAPIClient.getFlagUrl(from: country.alpha2Code)) { (result) in
@@ -75,10 +100,22 @@ extension ViewController: UICollectionViewDelegate {
         
         let storyboard = UIStoryboard.init(name: "Main", bundle:nil)
         let countryDVC = storyboard.instantiateViewController(withIdentifier: "detailVC") as! DetailViewController
-        let country = countries[indexPath.row]
+        let country = filteredCountries[indexPath.row]
         countryDVC.country = country
         
         self.navigationController?.pushViewController(countryDVC, animated: true)
         
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200 , height: 200)
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchString = searchText
     }
 }

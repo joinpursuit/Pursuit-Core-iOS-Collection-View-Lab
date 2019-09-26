@@ -22,14 +22,18 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = country.name
-        capitalLabel.text = country.capital
-        populationLabel.text = country.population.description
+        configureLabels()
         loadImage()
 
     }
     
-    func loadImage() {
+    private func configureLabels() {
+        nameLabel.text = country.name
+        capitalLabel.text = country.capital
+        populationLabel.text = country.population.description
+    }
+    
+    private func loadImage() {
         ImageHelper.shared.getImage(urlStr: CountryAPIClient.getFlagUrl(from: country.alpha2Code)) { (result) in
             DispatchQueue.main.async {
                 switch result {

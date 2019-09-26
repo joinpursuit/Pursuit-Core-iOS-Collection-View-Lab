@@ -13,10 +13,21 @@ struct CountryAPIClient {
 
     
     func fetchData(searchStr: String, completionHandler: @escaping (Result<[Countries], AppError>) -> () ) {
-        
-        guard let url = URL(string:  "https://restcountries.eu/rest/v2/name/\(searchStr.lowercased())") else { completionHandler(.failure(.badURL))
-            return
+        var str = "united"
+        if searchStr != "" {
+          str = searchStr
+        } else {
+            str = "united"
         }
+        
+        
+        guard let url = URL(string:  "https://restcountries.eu/rest/v2/name/\(str.lowercased())") else { completionHandler(.failure(.badURL))
+                       return
+   
+        }
+        
+        
+       
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             

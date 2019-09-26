@@ -82,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="countryCollection" destination="NDc-Pe-Rgs" id="Cnv-c2-9sm"/>
+                        <outlet property="searchBar" destination="tQD-fq-r5B" id="uJS-5h-S2O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var countryCollection: UICollectionView!
     
     var countries = [Countries]() {
@@ -18,10 +20,17 @@ class ViewController: UIViewController {
         }
     }
     
+    var searchString: String? {
+        didSet {
+            loadSearch(str: searchString ?? "United")
+        }
+    }
+    
+    
     
     //MARK:Private Methods
-    private func loadCountries(){
-        CountryAPIClient.shared.fetchData { (result) in
+    private func loadSearch(str: String){
+        CountryAPIClient.shared.fetchData(searchStr: str) { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .failure(let error):
@@ -35,9 +44,10 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        loadCountries()
+        loadSearch(str: "United")
         countryCollection.delegate = self
         countryCollection.dataSource = self
+        searchBar.delegate = self
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -73,4 +83,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     
+}
+
+extension ViewController: UISearchBarDelegate {
+     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+           var searchTerm = searchBar.text ?? ""
+           searchTerm = searchTerm.lowercased().replacingOccurrences(of: " ", with: "")
+           loadSearch(str: searchTerm)
+           print(searchTerm)
+       }
 }

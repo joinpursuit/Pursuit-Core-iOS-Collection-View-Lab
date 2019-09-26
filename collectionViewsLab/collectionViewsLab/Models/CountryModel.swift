@@ -32,9 +32,9 @@ struct Countries: Codable {
 }
 
 struct Currency: Codable {
-    var code: String
-    var name: String
-    var symbol: String
+    var code: String?
+    var name: String?
+    var symbol: String?
     
 }
 

@@ -16,6 +16,9 @@ struct CountryAPIClient {
     
     // MARK: - Instance Methods
     
+    static func getFlagUrl(from abbreviation: String) -> String {
+        return "https://www.countryflags.io/\(abbreviation.lowercased())/shiny/64.png"
+    }
     
     func getElements(completionHandler: @escaping (Result<[Country], AppError>) -> ())  {
         NetworkHelper.manager.performDataTask(withUrl: countryURL, andMethod: .get) { (results) in

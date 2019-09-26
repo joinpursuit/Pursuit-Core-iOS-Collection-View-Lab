@@ -19,6 +19,7 @@
 		287E418F233D209600C2A26D /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E418E233D209600C2A26D /* NetworkHelper.swift */; };
 		287E4191233D20C300C2A26D /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4190233D20C300C2A26D /* ImageHelper.swift */; };
 		287E4193233D213D00C2A26D /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4192233D213D00C2A26D /* CountryAPIClient.swift */; };
+		287E4195233D3F7700C2A26D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4194233D3F7700C2A26D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		287E418E233D209600C2A26D /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		287E4190233D20C300C2A26D /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		287E4192233D213D00C2A26D /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
+		287E4194233D3F7700C2A26D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				287E4164233D1C9400C2A26D /* ViewController.swift */,
+				287E4194233D3F7700C2A26D /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287E4195233D3F7700C2A26D /* DetailViewController.swift in Sources */,
 				287E4165233D1C9400C2A26D /* ViewController.swift in Sources */,
 				287E418B233D203F00C2A26D /* CountryCollectionViewCell.swift in Sources */,
 				287E418D233D207100C2A26D /* AppError.swift in Sources */,

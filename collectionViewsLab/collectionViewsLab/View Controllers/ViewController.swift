@@ -73,6 +73,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.capital.text = "Capital: \(country.capital)"
         cell.name.text = country.name
         cell.population.text = "Pop: \(country.population)"
+        ImageHelper.shared.fetchImage(urlString: country.imageURL) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let flag):
+                    cell.flagImage.image = flag
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            }.self
         
         
         return cell

@@ -25,25 +25,22 @@ struct CountryAPIClient {
                        return
    
         }
-        
-        
-       
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            guard error == nil else {completionHandler(.failure(.badStatusCode))
-                return
+    
+        NetworkManager.manager.performDataTask(withUrl: url, andMethod: .get) { (result) in
+            switch result {
+            case .failure(let error):
+                completionHandler(.failure(error))
+            case .success(let data):
+                do {
+                    let decoded = try JSONDecoder().decode([Countries].self, from: data)
+                    completionHandler(.success(decoded))
+                } catch {
+                    completionHandler(.failure(.badStatusCode))
+                    print(error)
+                }
             }
-            
-            guard let data = data else {completionHandler(.failure(.noDataReceived))
-                return
-            }
-            
-            guard let countries = Countries.getCountries(from: data) else {completionHandler(.failure(.invalidJSONResponse))
-                return
-            }
-            
-            completionHandler(.success(countries))}.resume()
+        }
+        
     }
     
     

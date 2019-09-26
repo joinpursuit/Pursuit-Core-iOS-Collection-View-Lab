@@ -17,19 +17,19 @@ struct Countries: Codable {
     var capital: String
     var population: Int
     var currencies: [Currency]
+    var alpha2Code: String?
     
-    static func getCountries(from data: Data) -> [Countries]? {
-        do {
-            let countries = try JSONDecoder().decode([Countries].self, from: data)
-            return countries
-        } catch let decodeError {
-            fatalError("Could not decode \(decodeError)")
+    var imageURL: String {
+        if alpha2Code != nil || alpha2Code != "" {
+            return "https://www.countryflags.io/\(alpha2Code!.lowercased())/flat/64.png"
+        } else {
+            return "https://i2.wp.com/icfablab.org/wp-content/uploads/woocommerce-placeholder.png?zoom=2&fit=510%2C510&ssl=1"
         }
-        
-}
-    
+    }
     
 }
+
+
 
 struct Currency: Codable {
     var code: String?

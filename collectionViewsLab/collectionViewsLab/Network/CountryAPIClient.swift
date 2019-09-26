@@ -12,9 +12,9 @@ struct CountryAPIClient {
     static let shared = CountryAPIClient()
 
     
-    func fetchData(completionHandler: @escaping (Result<[Countries], AppError>) -> () ) {
-        let urlString = "https://restcountries.eu/rest/v2/name/united"
-        guard let url = URL(string: urlString) else { completionHandler(.failure(.badURL))
+    func fetchData(searchStr: String, completionHandler: @escaping (Result<[Countries], AppError>) -> () ) {
+        
+        guard let url = URL(string:  "https://restcountries.eu/rest/v2/name/\(searchStr.lowercased())") else { completionHandler(.failure(.badURL))
             return
         }
         

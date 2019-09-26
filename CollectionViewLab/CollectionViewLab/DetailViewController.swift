@@ -12,12 +12,33 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var capitalLabel: UILabel!
+    
+    @IBOutlet weak var populationLabel: UILabel!
+    
+    @IBOutlet weak var countryImage: UIImageView!
+    
     var country: Country!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = country.name
+        capitalLabel.text = country.capital
+        populationLabel.text = country.population.description
+        loadImage()
 
     }
     
-
+    func loadImage() {
+        ImageHelper.shared.getImage(urlStr: CountryAPIClient.getFlagUrl(from: country.alpha2Code)) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let imageFromOnline):
+                    self.countryImage.image = imageFromOnline
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
 }

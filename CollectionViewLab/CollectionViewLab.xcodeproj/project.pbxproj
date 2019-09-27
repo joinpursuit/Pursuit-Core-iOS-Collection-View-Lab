@@ -12,6 +12,10 @@
 		1DFCCBBE233D25F7000C1EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DFCCBBC233D25F7000C1EC3 /* Main.storyboard */; };
 		1DFCCBC0233D25FE000C1EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DFCCBBF233D25FE000C1EC3 /* Assets.xcassets */; };
 		1DFCCBC3233D25FE000C1EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DFCCBC1233D25FE000C1EC3 /* LaunchScreen.storyboard */; };
+		1DFCCBEC233D5DD0000C1EC3 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBEB233D5DD0000C1EC3 /* Country.swift */; };
+		1DFCCBEE233DA305000C1EC3 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBED233DA304000C1EC3 /* NetworkHelper.swift */; };
+		1DFCCBF0233DA406000C1EC3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBEF233DA406000C1EC3 /* AppError.swift */; };
+		1DFCCBF2233DA68C000C1EC3 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBF1233DA68C000C1EC3 /* ImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +23,13 @@
 		1DFCCBB8233D25F7000C1EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DFCCBBA233D25F7000C1EC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DFCCBBD233D25F7000C1EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1DFCCBBF233D25FE000C1EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DFCCBBF233D25FE000C1EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Helpers/Assets.xcassets; sourceTree = "<group>"; };
 		1DFCCBC2233D25FE000C1EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DFCCBC4233D25FE000C1EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DFCCBEB233D5DD0000C1EC3 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1DFCCBED233DA304000C1EC3 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		1DFCCBEF233DA406000C1EC3 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		1DFCCBF1233DA68C000C1EC3 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = ../../ImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		1DFCCBE8233D36CA000C1EC3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1DFCCBEB233D5DD0000C1EC3 /* Country.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,8 +100,9 @@
 		1DFCCBE9233D36CF000C1EC3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1DFCCBC1233D25FE000C1EC3 /* LaunchScreen.storyboard */,
-				1DFCCBBF233D25FE000C1EC3 /* Assets.xcassets */,
+				1DFCCBF1233DA68C000C1EC3 /* ImageHelper.swift */,
+				1DFCCBED233DA304000C1EC3 /* NetworkHelper.swift */,
+				1DFCCBEF233DA406000C1EC3 /* AppError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -100,6 +110,8 @@
 		1DFCCBEA233D36D4000C1EC3 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				1DFCCBBF233D25FE000C1EC3 /* Assets.xcassets */,
+				1DFCCBC1233D25FE000C1EC3 /* LaunchScreen.storyboard */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -175,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFCCBEE233DA305000C1EC3 /* NetworkHelper.swift in Sources */,
 				1DFCCBBB233D25F7000C1EC3 /* ViewController.swift in Sources */,
+				1DFCCBF0233DA406000C1EC3 /* AppError.swift in Sources */,
+				1DFCCBEC233D5DD0000C1EC3 /* Country.swift in Sources */,
 				1DFCCBB9233D25F7000C1EC3 /* AppDelegate.swift in Sources */,
+				1DFCCBF2233DA68C000C1EC3 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

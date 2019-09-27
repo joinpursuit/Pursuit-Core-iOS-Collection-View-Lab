@@ -16,6 +16,7 @@
 		1DFCCBEE233DA305000C1EC3 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBED233DA304000C1EC3 /* NetworkHelper.swift */; };
 		1DFCCBF0233DA406000C1EC3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBEF233DA406000C1EC3 /* AppError.swift */; };
 		1DFCCBF2233DA68C000C1EC3 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBF1233DA68C000C1EC3 /* ImageHelper.swift */; };
+		1DFCCBF4233DA788000C1EC3 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCCBF3233DA788000C1EC3 /* CountryAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1DFCCBED233DA304000C1EC3 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		1DFCCBEF233DA406000C1EC3 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		1DFCCBF1233DA68C000C1EC3 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageHelper.swift; path = ../../ImageHelper.swift; sourceTree = "<group>"; };
+		1DFCCBF3233DA788000C1EC3 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				1DFCCBF1233DA68C000C1EC3 /* ImageHelper.swift */,
 				1DFCCBED233DA304000C1EC3 /* NetworkHelper.swift */,
 				1DFCCBEF233DA406000C1EC3 /* AppError.swift */,
+				1DFCCBF3233DA788000C1EC3 /* CountryAPIClient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DFCCBEE233DA305000C1EC3 /* NetworkHelper.swift in Sources */,
+				1DFCCBF4233DA788000C1EC3 /* CountryAPIClient.swift in Sources */,
 				1DFCCBBB233D25F7000C1EC3 /* ViewController.swift in Sources */,
 				1DFCCBF0233DA406000C1EC3 /* AppError.swift in Sources */,
 				1DFCCBEC233D5DD0000C1EC3 /* Country.swift in Sources */,

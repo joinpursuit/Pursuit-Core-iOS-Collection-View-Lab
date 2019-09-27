@@ -104,14 +104,21 @@ extension ViewController: UICollectionViewDelegate {
         countryDVC.country = country
         
         self.navigationController?.pushViewController(countryDVC, animated: true)
-        
     }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200 , height: 200)
+        return CGSize(width: 150 , height: 170)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let edgeInset = UIEdgeInsets(top: 20, left: 52, bottom: 20, right: 51)
+        
+        return edgeInset
+    }
+    
+    
 }
 
 extension ViewController: UISearchBarDelegate {

@@ -55,6 +55,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.58639636740000001" green="0.87528813959999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="MzM-rD-IKF" firstAttribute="top" secondItem="vZK-5l-ttE" secondAttribute="top" multiplier="0.3" id="2Ic-ql-BpY"/>
                                             <constraint firstItem="MzM-rD-IKF" firstAttribute="leading" secondItem="vZK-5l-ttE" secondAttribute="leading" id="7uP-A1-7f6"/>

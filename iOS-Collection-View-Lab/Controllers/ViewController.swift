@@ -40,7 +40,16 @@ class CountryCollectionViewController: UIViewController, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = countryCollectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath) as? CountryCell else {
+            fatalError("unable to dequeue an image cell")
+        }
+        
+        let country = countryInfo[indexPath.item]
+        cell.countryCapital.text = country.capital
+        cell.countryName.text = country.name
+        cell.population.text = country.population.description
+        return cell
+        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -49,7 +58,7 @@ class CountryCollectionViewController: UIViewController, UICollectionViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        countryCollectionView.dataSource = self
     }
 
 

@@ -11,6 +11,8 @@
 		0B884DFA2345305E00E6ACC4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B884DF92345305E00E6ACC4 /* NetworkHelper.swift */; };
 		0B884DFC2345308100E6ACC4 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B884DFB2345308100E6ACC4 /* ImageHelper.swift */; };
 		0B884DFE234531BF00E6ACC4 /* CountriesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B884DFD234531BF00E6ACC4 /* CountriesAPIClient.swift */; };
+		0B884E0023453D0900E6ACC4 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B884DFF23453D0900E6ACC4 /* CountriesModel.swift */; };
+		0B884E02234550C900E6ACC4 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B884E01234550C900E6ACC4 /* CountryCell.swift */; };
 		0BBA2193233EA3CE00810283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2192233EA3CE00810283 /* AppDelegate.swift */; };
 		0BBA2195233EA3CE00810283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2194233EA3CE00810283 /* ViewController.swift */; };
 		0BBA2198233EA3CE00810283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA2196233EA3CE00810283 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 		0B884DF92345305E00E6ACC4 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		0B884DFB2345308100E6ACC4 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		0B884DFD234531BF00E6ACC4 /* CountriesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAPIClient.swift; sourceTree = "<group>"; };
+		0B884DFF23453D0900E6ACC4 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
+		0B884E01234550C900E6ACC4 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		0BBA218F233EA3CE00810283 /* iOS-Collection-View-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Collection-View-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BBA2192233EA3CE00810283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BBA2194233EA3CE00810283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		0B884DF423452F0400E6ACC4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0B884DFF23453D0900E6ACC4 /* CountriesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -85,6 +90,8 @@
 		0B884DF623452F5B00E6ACC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BBA2194233EA3CE00810283 /* ViewController.swift */,
+				0B884E01234550C900E6ACC4 /* CountryCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				0BBA2192233EA3CE00810283 /* AppDelegate.swift */,
-				0BBA2194233EA3CE00810283 /* ViewController.swift */,
 				0BBA2196233EA3CE00810283 /* Main.storyboard */,
 				0BBA2199233EA3D100810283 /* Assets.xcassets */,
 				0BBA219B233EA3D100810283 /* LaunchScreen.storyboard */,
@@ -233,8 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B884E02234550C900E6ACC4 /* CountryCell.swift in Sources */,
 				0B884DFA2345305E00E6ACC4 /* NetworkHelper.swift in Sources */,
 				0B884DFC2345308100E6ACC4 /* ImageHelper.swift in Sources */,
+				0B884E0023453D0900E6ACC4 /* CountriesModel.swift in Sources */,
 				0BBA2195233EA3CE00810283 /* ViewController.swift in Sources */,
 				0BBA2193233EA3CE00810283 /* AppDelegate.swift in Sources */,
 				0B884DFE234531BF00E6ACC4 /* CountriesAPIClient.swift in Sources */,

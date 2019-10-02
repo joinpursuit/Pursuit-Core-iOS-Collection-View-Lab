@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ImageHelper {
     
@@ -16,9 +17,11 @@ class ImageHelper {
     
     // MARK: - Instance Methods
     
-    func getImage(urlStr: String, completionHandler: @escaping (Result<UIImage, AppError>) -> ()) {
+    func getImage(alphaCode: String, completionHandler: @escaping (Result<UIImage, AppError>) -> ()) {
         
-        guard let url = URL(string: urlStr) else {
+        let imageURL = "https://www.countryflags.io/\(alphaCode)/flat/64.png"
+        
+        guard let url = URL(string: imageURL) else {
             completionHandler(.failure(.badURL))
             return
         }
@@ -47,3 +50,5 @@ class ImageHelper {
     
     private init() {}
 }
+
+

@@ -13,11 +13,11 @@ enum HTTPMethod: String {
     case post
 }
 
-class NetworkHelper {
+class NetworkManager {
     
     // MARK: - Static Properties
     
-    static let manager = NetworkHelper()
+    static let shared = NetworkManager()
     
     // MARK: - Instance Methods
     func performDataTask(withUrl url: URL,

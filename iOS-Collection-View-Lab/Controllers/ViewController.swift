@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CountryCollectionViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate {
+class CountryCollectionViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate, UISearchBarDelegate {
     
     var countryInfo = [Countries]() {
         didSet {
@@ -34,6 +34,7 @@ class CountryCollectionViewController: UIViewController, UICollectionViewDataSou
         }
         
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        return countryInfo.count
@@ -73,6 +74,7 @@ class CountryCollectionViewController: UIViewController, UICollectionViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         countryCollectionView.dataSource = self
+        countryCollectionView.delegate = self
         countrySearchBar.delegate = self
     }
 

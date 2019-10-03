@@ -17,7 +17,7 @@ class CountriesAPIManager {
         
        // let newStr = countryURL.replacingOccurrences(of: " ", with: "-")
                 
-        let countryURL = "https://restcountries.eu/rest/v2/name/\(showInfo.replacingOccurrences(of: " ", with: "-"))"
+        let countryURL = "https://restcountries.eu/rest/v2/name/\(showInfo.replacingOccurrences(of: " ", with: "-").lowercased())"
     
         guard let urlStr = URL(string: countryURL) else {
             completionHandler(.failure(AppError.badURL))

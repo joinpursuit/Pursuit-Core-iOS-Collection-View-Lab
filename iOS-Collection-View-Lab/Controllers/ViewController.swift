@@ -36,29 +36,44 @@ class CountryCollectionViewController: UIViewController, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        countryInfo.count
+       return countryInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = countryCollectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath) as? CountryCell else {
-            fatalError("unable to dequeue an image cell")
+        guard let cell = countryCollectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath) as? CountryCell else { return
+            UICollectionViewCell()
         }
-        
         let country = countryInfo[indexPath.item]
         cell.countryCapital.text = country.capital
         cell.countryName.text = country.name
         cell.population.text = country.population.description
+        
+        ImageHelper.shared.getImage(alphaCode: country.alpha2Code){(result)in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let imageFromOnline):
+                    cell.countryImage.image = imageFromOnline
+                }
+            }
+        }
         return cell
         
     }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        loadData(countryData: searchText)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        loadData(countryData: searchBar.text!)
+       print(countryInfo)
     }
+    
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        loadData(countryData: searchText)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         countryCollectionView.dataSource = self
+        countrySearchBar.delegate = self
     }
 
 

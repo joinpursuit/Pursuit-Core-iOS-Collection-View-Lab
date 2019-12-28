@@ -14,6 +14,9 @@
 		0B54856D23B404AE00451D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B54856C23B404AE00451D0C /* Assets.xcassets */; };
 		0B54857023B404AE00451D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B54856E23B404AE00451D0C /* LaunchScreen.storyboard */; };
 		0B54857B23B404AE00451D0C /* CollectionViewLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B54857A23B404AE00451D0C /* CollectionViewLabTests.swift */; };
+		0B9F877E23B7052B00EF7E5C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F877D23B7052B00EF7E5C /* NetworkHelper.swift */; };
+		0B9F878023B7056000EF7E5C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F877F23B7056000EF7E5C /* AppError.swift */; };
+		0B9F878223B7056900EF7E5C /* GenericCoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F878123B7056900EF7E5C /* GenericCoderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		0B54857623B404AE00451D0C /* CollectionViewLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B54857A23B404AE00451D0C /* CollectionViewLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLabTests.swift; sourceTree = "<group>"; };
 		0B54857C23B404AE00451D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B9F877D23B7052B00EF7E5C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		0B9F877F23B7056000EF7E5C /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		0B9F878123B7056900EF7E5C /* GenericCoderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCoderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				0B54856323B404A900451D0C /* AppDelegate.swift */,
 				0B54856523B404A900451D0C /* SceneDelegate.swift */,
 				0B54856723B404A900451D0C /* ViewController.swift */,
+				0B9F877F23B7056000EF7E5C /* AppError.swift */,
+				0B9F877D23B7052B00EF7E5C /* NetworkHelper.swift */,
+				0B9F878123B7056900EF7E5C /* GenericCoderService.swift */,
 				0B54856923B404A900451D0C /* Main.storyboard */,
 				0B54856C23B404AE00451D0C /* Assets.xcassets */,
 				0B54856E23B404AE00451D0C /* LaunchScreen.storyboard */,
@@ -200,7 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9F877E23B7052B00EF7E5C /* NetworkHelper.swift in Sources */,
 				0B54856823B404A900451D0C /* ViewController.swift in Sources */,
+				0B9F878023B7056000EF7E5C /* AppError.swift in Sources */,
+				0B9F878223B7056900EF7E5C /* GenericCoderService.swift in Sources */,
 				0B54856423B404A900451D0C /* AppDelegate.swift in Sources */,
 				0B54856623B404A900451D0C /* SceneDelegate.swift in Sources */,
 			);

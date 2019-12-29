@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loadData()
     }
     
     private func loadData() {
@@ -45,7 +45,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Country Cell", for: indexPath) as? CountryCollectionViewCell else {
+            print("Could not create custom cell with reuseIdentifier")
+            return UICollectionViewCell()
+        }
+        
+        cell.configureCell(country: countries[indexPath.row])
+        
+        return cell
     }
 }
 

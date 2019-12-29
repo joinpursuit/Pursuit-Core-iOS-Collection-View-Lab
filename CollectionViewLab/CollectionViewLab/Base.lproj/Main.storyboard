@@ -83,6 +83,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kWQ-Ae-Y31"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BQT-ku-AkS"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

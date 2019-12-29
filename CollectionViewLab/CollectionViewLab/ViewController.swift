@@ -23,8 +23,14 @@ class ViewController: UIViewController {
         loadData()
     }
     
-    private func loadData() {
-        let url = "https://restcountries.eu/rest/v2/name/united"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            let indexPath = collectionView.indexPathsForSelectedItems![0]
+            destination.country = countries[indexPath.row]
+        }
+    }
+    
+    private func loadData(url: String = "https://restcountries.eu/rest/v2/name/united") {
 
         GenericCoderService.manager.getJSON(objectType: [Country].self, with: url) { result in
             switch result {
@@ -56,4 +62,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-extension ViewController: UITextFieldDelegate {}
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        guard let text = textField.text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return false
+        }
+        
+        let url = "https://restcountries.eu/rest/v2/name/\(text)"
+        loadData(url: url)
+        resignFirstResponder()
+        return true
+    }
+}

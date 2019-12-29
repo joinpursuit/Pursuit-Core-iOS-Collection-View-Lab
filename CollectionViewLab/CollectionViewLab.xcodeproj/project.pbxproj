@@ -17,6 +17,7 @@
 		0B8AE3BF23B8F993006444B1 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8AE3BE23B8F993006444B1 /* Country.swift */; };
 		0B8AE3C123B902CB006444B1 /* ImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8AE3C023B902CB006444B1 /* ImageView+Extensions.swift */; };
 		0B8AE3C323B908CC006444B1 /* CountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8AE3C223B908CC006444B1 /* CountryCollectionViewCell.swift */; };
+		0B8AE3C523B91024006444B1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8AE3C423B91024006444B1 /* DetailViewController.swift */; };
 		0B9F877E23B7052B00EF7E5C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F877D23B7052B00EF7E5C /* NetworkHelper.swift */; };
 		0B9F878023B7056000EF7E5C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F877F23B7056000EF7E5C /* AppError.swift */; };
 		0B9F878223B7056900EF7E5C /* GenericCoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F878123B7056900EF7E5C /* GenericCoderService.swift */; };
@@ -47,6 +48,7 @@
 		0B8AE3BE23B8F993006444B1 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		0B8AE3C023B902CB006444B1 /* ImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Extensions.swift"; sourceTree = "<group>"; };
 		0B8AE3C223B908CC006444B1 /* CountryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCollectionViewCell.swift; sourceTree = "<group>"; };
+		0B8AE3C423B91024006444B1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0B9F877D23B7052B00EF7E5C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		0B9F877F23B7056000EF7E5C /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		0B9F878123B7056900EF7E5C /* GenericCoderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCoderService.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				0B9F878123B7056900EF7E5C /* GenericCoderService.swift */,
 				0B8AE3BE23B8F993006444B1 /* Country.swift */,
 				0B54856723B404A900451D0C /* ViewController.swift */,
+				0B8AE3C423B91024006444B1 /* DetailViewController.swift */,
 				0B8AE3C223B908CC006444B1 /* CountryCollectionViewCell.swift */,
 				0B54856923B404A900451D0C /* Main.storyboard */,
 				0B54856C23B404AE00451D0C /* Assets.xcassets */,
@@ -225,6 +228,7 @@
 				0B8AE3C323B908CC006444B1 /* CountryCollectionViewCell.swift in Sources */,
 				0B9F878223B7056900EF7E5C /* GenericCoderService.swift in Sources */,
 				0B54856423B404A900451D0C /* AppDelegate.swift in Sources */,
+				0B8AE3C523B91024006444B1 /* DetailViewController.swift in Sources */,
 				0B8AE3C123B902CB006444B1 /* ImageView+Extensions.swift in Sources */,
 				0B54856623B404A900451D0C /* SceneDelegate.swift in Sources */,
 			);

@@ -21,7 +21,7 @@ class CountryCell: UICollectionViewCell {
         flagImageView.image = nil
     }
     
-    private func setUpCell(_ country: Country){
+    func setUpCell(_ country: Country){
         flagImageURL = CountryAPIClient.getFlagURL(country.alpha2Code)
         countryNameLabel.text = "\(country.name)"
         countryCapitalLabel.text = "Captial: \(country.capital)"

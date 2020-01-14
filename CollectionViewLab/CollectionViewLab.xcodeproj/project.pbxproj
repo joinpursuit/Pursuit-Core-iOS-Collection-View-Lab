@@ -20,6 +20,8 @@
 		C46ABC2D23CE3F14000AFB80 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC2C23CE3F14000AFB80 /* Country.swift */; };
 		C46ABC2F23CE401A000AFB80 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC2E23CE401A000AFB80 /* CountryAPIClient.swift */; };
 		C46ABC3223CE4369000AFB80 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3123CE4369000AFB80 /* UIImageView+Extensions.swift */; };
+		C46ABC3423CE512A000AFB80 /* DetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3323CE512A000AFB80 /* DetailedController.swift */; };
+		C46ABC3623CE5576000AFB80 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3523CE5576000AFB80 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		C46ABC2C23CE3F14000AFB80 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		C46ABC2E23CE401A000AFB80 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
 		C46ABC3123CE4369000AFB80 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		C46ABC3323CE512A000AFB80 /* DetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedController.swift; sourceTree = "<group>"; };
+		C46ABC3523CE5576000AFB80 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C46ABC0223CE3A19000AFB80 /* ViewController.swift */,
+				C46ABC3323CE512A000AFB80 /* DetailedController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C46ABC3123CE4369000AFB80 /* UIImageView+Extensions.swift */,
+				C46ABC3523CE5576000AFB80 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -277,8 +283,10 @@
 				C46ABC2D23CE3F14000AFB80 /* Country.swift in Sources */,
 				C46ABC0323CE3A19000AFB80 /* ViewController.swift in Sources */,
 				C46ABC2523CE3AA2000AFB80 /* NetworkError.swift in Sources */,
+				C46ABC3423CE512A000AFB80 /* DetailedController.swift in Sources */,
 				C46ABC3223CE4369000AFB80 /* UIImageView+Extensions.swift in Sources */,
 				C46ABC2A23CE3D77000AFB80 /* CountryCell.swift in Sources */,
+				C46ABC3623CE5576000AFB80 /* UIViewController+Extensions.swift in Sources */,
 				C46ABC2723CE3B01000AFB80 /* NetworkHelper.swift in Sources */,
 				C46ABBFF23CE3A19000AFB80 /* AppDelegate.swift in Sources */,
 				C46ABC2F23CE401A000AFB80 /* CountryAPIClient.swift in Sources */,

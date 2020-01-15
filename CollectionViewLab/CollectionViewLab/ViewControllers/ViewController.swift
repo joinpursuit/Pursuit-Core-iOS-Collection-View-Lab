@@ -20,14 +20,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    var location: Location?
     
     var userQuery = "" {
         didSet{
             CountryAPIClient.getCountries(CountryAPIClient.getCountryURL(userQuery)) { [weak self] result in
                 switch result{
-                case .failure(let netError):
+                case .failure:
                     DispatchQueue.main.async{
-                        self?.showAlert("Data Loading Error", "Could not load countries, encountered error: \(netError)")
+                        self?.showAlert("Oops", "Could not find a country with the name \(self?.userQuery ?? "").")
                     }
                 case .success(let countryArr):
                     self?.countries = countryArr
@@ -75,6 +76,18 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
         guard let detailedVC = storyboard?.instantiateViewController(withIdentifier: "DetailedController") as? DetailedController else {
             fatalError("Could not instantiate instance of Detailed Controller")
         }
+        WeatherAPIClient.getLocations(WeatherAPIClient.getLocationURL(countries[indexPath.row].latlng[0], countries[indexPath.row].latlng[1])) { [weak self] result in
+            switch result{
+            case .failure(let netError):
+                DispatchQueue.main.async{
+                    self?.showAlert("Location Error", "Could not load location \(netError)")
+                }
+            case .success(let loc):
+                self?.location = loc.first
+            }
+        }
+        sleep(1)
+        detailedVC.location = location ?? nil
         detailedVC.currentCountry = countries[indexPath.row]
         navigationController?.pushViewController(detailedVC, animated: true)
     }

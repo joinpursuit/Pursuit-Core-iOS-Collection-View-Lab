@@ -134,10 +134,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wi-Ld-nEG" userLabel="Currency">
+                                <rect key="frame" x="20" y="411" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaC-uE-lBA">
+                                <rect key="frame" x="20" y="452" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jpj-lv-gsE" firstAttribute="trailing" secondItem="ebU-5C-8Xt" secondAttribute="trailing" id="9ct-oB-zTb"/>
+                            <constraint firstItem="OaC-uE-lBA" firstAttribute="leading" secondItem="jpj-lv-gsE" secondAttribute="leading" constant="20" id="Gfy-dA-Bre"/>
+                            <constraint firstItem="jpj-lv-gsE" firstAttribute="trailing" secondItem="OaC-uE-lBA" secondAttribute="trailing" constant="20" id="HQ3-j0-cv4"/>
                             <constraint firstItem="jpj-lv-gsE" firstAttribute="trailing" secondItem="G8R-oR-bE1" secondAttribute="trailing" constant="20" id="PXq-zH-KEf"/>
                             <constraint firstItem="jpj-lv-gsE" firstAttribute="trailing" secondItem="lwd-S0-NAv" secondAttribute="trailing" constant="20" id="S3z-gK-JP8"/>
                             <constraint firstItem="lwd-S0-NAv" firstAttribute="leading" secondItem="jpj-lv-gsE" secondAttribute="leading" constant="20" id="YIR-z9-VBu"/>
@@ -145,15 +159,21 @@
                             <constraint firstItem="G8R-oR-bE1" firstAttribute="leading" secondItem="jpj-lv-gsE" secondAttribute="leading" constant="20" id="aCa-ma-Y53"/>
                             <constraint firstItem="ebU-5C-8Xt" firstAttribute="top" secondItem="jpj-lv-gsE" secondAttribute="top" id="anL-rv-Hbe"/>
                             <constraint firstItem="lwd-S0-NAv" firstAttribute="top" secondItem="G8R-oR-bE1" secondAttribute="bottom" constant="20" id="d06-U3-nY5"/>
+                            <constraint firstItem="jpj-lv-gsE" firstAttribute="trailing" secondItem="9Wi-Ld-nEG" secondAttribute="trailing" constant="20" id="eJZ-YH-klt"/>
+                            <constraint firstItem="9Wi-Ld-nEG" firstAttribute="leading" secondItem="jpj-lv-gsE" secondAttribute="leading" constant="20" id="er2-Rq-dna"/>
+                            <constraint firstItem="OaC-uE-lBA" firstAttribute="top" secondItem="9Wi-Ld-nEG" secondAttribute="bottom" constant="20" id="fkX-Ce-iK7"/>
                             <constraint firstItem="G8R-oR-bE1" firstAttribute="top" secondItem="ebU-5C-8Xt" secondAttribute="bottom" constant="20" id="mAc-z8-b89"/>
+                            <constraint firstItem="9Wi-Ld-nEG" firstAttribute="top" secondItem="lwd-S0-NAv" secondAttribute="bottom" constant="20" id="q05-eu-YLh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jpj-lv-gsE"/>
                     </view>
                     <navigationItem key="navigationItem" id="g8b-v8-wWU"/>
                     <connections>
                         <outlet property="capitalLabel" destination="G8R-oR-bE1" id="1sm-5m-AI9"/>
+                        <outlet property="currencyLabel" destination="9Wi-Ld-nEG" id="tAR-F2-zMX"/>
                         <outlet property="flagImageView" destination="ebU-5C-8Xt" id="fDg-Cl-hZG"/>
                         <outlet property="populationLabel" destination="lwd-S0-NAv" id="ZEp-kp-KSz"/>
+                        <outlet property="weatherLabel" destination="OaC-uE-lBA" id="6i2-aR-Usl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zs-as-fqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

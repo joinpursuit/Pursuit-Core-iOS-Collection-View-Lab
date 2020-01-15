@@ -22,6 +22,8 @@
 		C46ABC3223CE4369000AFB80 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3123CE4369000AFB80 /* UIImageView+Extensions.swift */; };
 		C46ABC3423CE512A000AFB80 /* DetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3323CE512A000AFB80 /* DetailedController.swift */; };
 		C46ABC3623CE5576000AFB80 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3523CE5576000AFB80 /* UIViewController+Extensions.swift */; };
+		C46ABC3823CE64AD000AFB80 /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3723CE64AD000AFB80 /* WeatherModels.swift */; };
+		C46ABC3A23CE65E2000AFB80 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ABC3923CE65E2000AFB80 /* WeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		C46ABC3123CE4369000AFB80 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		C46ABC3323CE512A000AFB80 /* DetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedController.swift; sourceTree = "<group>"; };
 		C46ABC3523CE5576000AFB80 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		C46ABC3723CE64AD000AFB80 /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
+		C46ABC3923CE65E2000AFB80 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 			children = (
 				C46ABC2C23CE3F14000AFB80 /* Country.swift */,
 				C46ABC2E23CE401A000AFB80 /* CountryAPIClient.swift */,
+				C46ABC3923CE65E2000AFB80 /* WeatherAPI.swift */,
+				C46ABC3723CE64AD000AFB80 /* WeatherModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +296,8 @@
 				C46ABC2723CE3B01000AFB80 /* NetworkHelper.swift in Sources */,
 				C46ABBFF23CE3A19000AFB80 /* AppDelegate.swift in Sources */,
 				C46ABC2F23CE401A000AFB80 /* CountryAPIClient.swift in Sources */,
+				C46ABC3A23CE65E2000AFB80 /* WeatherAPI.swift in Sources */,
+				C46ABC3823CE64AD000AFB80 /* WeatherModels.swift in Sources */,
 				C46ABC0123CE3A19000AFB80 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

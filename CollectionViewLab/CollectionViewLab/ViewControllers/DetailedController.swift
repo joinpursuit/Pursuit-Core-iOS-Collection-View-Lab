@@ -13,8 +13,11 @@ class DetailedController: UIViewController {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var populationLabel: UILabel!
     @IBOutlet weak var capitalLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
     
     var currentCountry: Country?
+    var location: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,7 @@ class DetailedController: UIViewController {
         navigationItem.title = curCountry.name
         capitalLabel.text = "Capital: \(curCountry.capital)"
         populationLabel.text = "Population: \(curCountry.population)"
+        currencyLabel.text = "Currency: \(curCountry.currencies.first?.name ?? "n/a")"
         
         flagImageView.getImage(CountryAPIClient.getFlagURL(curCountry.alpha2Code)) { [weak self] result in
             switch result{
@@ -40,6 +44,20 @@ class DetailedController: UIViewController {
             case .success(let image):
                 DispatchQueue.main.async{
                     self?.flagImageView.image = image
+                }
+            }
+        }
+        if let loc = location {
+            WeatherAPIClient.getWeather(WeatherAPIClient.getWeather(using: loc.woeid)) { [weak self] result in
+                switch result {
+                case .failure(let netError):
+                    DispatchQueue.main.async{
+                        self?.showAlert("Weather Error", "Could not load weather for a given location: \(netError)")
+                    }
+                case .success(let weather):
+                    DispatchQueue.main.async{
+                        self?.weatherLabel.text = "Current weather in the region: \(weather.first?.currentWeather ?? "N/A")"
+                    }
                 }
             }
         }

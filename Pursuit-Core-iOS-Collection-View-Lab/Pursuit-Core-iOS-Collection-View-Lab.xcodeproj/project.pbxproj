@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F110272923CFABE5000758F7 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110272823CFABE5000758F7 /* CountryCell.swift */; };
+		F110272C23CFB19D000758F7 /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110272B23CFB19D000758F7 /* ViewController+Extensions.swift */; };
+		F110272E23D0B32D000758F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110272D23D0B32C000758F7 /* DetailViewController.swift */; };
 		F14E22CD23CE7F8D00A1E6E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E22CC23CE7F8D00A1E6E1 /* AppDelegate.swift */; };
 		F14E22CF23CE7F8D00A1E6E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E22CE23CE7F8D00A1E6E1 /* SceneDelegate.swift */; };
 		F14E22D123CE7F8D00A1E6E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E22D023CE7F8D00A1E6E1 /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F110272823CFABE5000758F7 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		F110272B23CFB19D000758F7 /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F110272D23D0B32C000758F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F14E22C923CE7F8D00A1E6E1 /* Pursuit-Core-iOS-Collection-View-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-iOS-Collection-View-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14E22CC23CE7F8D00A1E6E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14E22CE23CE7F8D00A1E6E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F110272A23CFB168000758F7 /* ViewController+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F110272B23CFB19D000758F7 /* ViewController+Extensions.swift */,
+			);
+			path = "ViewController+Extensions";
+			sourceTree = "<group>";
+		};
 		F14E22C023CE7F8D00A1E6E1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,7 @@
 		F14E22CB23CE7F8D00A1E6E1 /* Pursuit-Core-iOS-Collection-View-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				F110272A23CFB168000758F7 /* ViewController+Extensions */,
 				F14E22F723CE872B00A1E6E1 /* Network Services */,
 				F14E22F023CE853C00A1E6E1 /* Models */,
 				F14E22EF23CE852F00A1E6E1 /* Supporting Files */,
@@ -109,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F14E22D023CE7F8D00A1E6E1 /* ViewController.swift */,
+				F110272D23D0B32C000758F7 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +135,7 @@
 				F14E22CC23CE7F8D00A1E6E1 /* AppDelegate.swift */,
 				F14E22CE23CE7F8D00A1E6E1 /* SceneDelegate.swift */,
 				F14E22D523CE7F9000A1E6E1 /* Assets.xcassets */,
+				F110272823CFABE5000758F7 /* CountryCell.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -248,9 +265,12 @@
 			files = (
 				F14E22D123CE7F8D00A1E6E1 /* ViewController.swift in Sources */,
 				F14E22CD23CE7F8D00A1E6E1 /* AppDelegate.swift in Sources */,
+				F110272923CFABE5000758F7 /* CountryCell.swift in Sources */,
 				F14E22F523CE864000A1E6E1 /* CountryModel.swift in Sources */,
 				F14E22F923CE878400A1E6E1 /* CountriesAPIClient.swift in Sources */,
 				F14E22CF23CE7F8D00A1E6E1 /* SceneDelegate.swift in Sources */,
+				F110272C23CFB19D000758F7 /* ViewController+Extensions.swift in Sources */,
+				F110272E23D0B32D000758F7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

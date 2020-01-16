@@ -19,7 +19,7 @@ struct CountryList: Decodable {
 }
 
 struct Currencies:Decodable {
-    var code: String
-    var name: String
-    var symbol: String
+    var code: String?
+    var name: String?
+    var symbol: String?
 }

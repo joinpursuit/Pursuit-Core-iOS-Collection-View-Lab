@@ -10,8 +10,9 @@ import Foundation
 import  NetworkHelper
 
 struct CountryListAPI{
-    static func getListOfCountries(completion: @escaping (Result<[CountryList],AppError>)->()){
-        let endPointURLString = "https://restcountries.eu/rest/v2/name/united"
+    static func getListOfCountries(query: String, completion: @escaping (Result<[CountryList],AppError>)->()){
+        let queryMod = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        let endPointURLString = "https://restcountries.eu/rest/v2/name/\(queryMod)"
         
         guard let url = URL(string: endPointURLString) else {
             completion(.failure(.badURL(endPointURLString)))

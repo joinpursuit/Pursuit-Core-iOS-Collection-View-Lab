@@ -22,17 +22,18 @@ class ViewController: UIViewController {
         }
     }
     
-    var query = ""{
-        didSet{
-            allCountryData = allCountryData.filter{$0.name.lowercased().contains(query.lowercased())}
-        }
-    }
+    //var query : String?
+//    {
+//        didSet{
+//            allCountryData = allCountryData.filter{$0.name.lowercased().contains(query.lowercased())}
+//        }
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loadData()
+        loadData(with: "united")
         dataSourcesAndDelegates()
     }
     
@@ -50,11 +51,13 @@ class ViewController: UIViewController {
         detailVC.passedObj = country
     }
     
-    func loadData(){
-        CountryListAPI.getListOfCountries {[weak self] (result) in
+    func loadData(with query: String){
+        CountryListAPI.getListOfCountries(query: query) {[weak self] (result) in
             switch result{
             case .failure(let appError):
-                self?.showAlert(title: "Network Error", message: "\(appError)")
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "Network Error", message: "\(appError)")
+                }
             case .success(let countries):
                 self?.allCountryData = countries
             }
@@ -86,39 +89,47 @@ extension ViewController: UICollectionViewDataSource{
 
 extension ViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let interItemSpacingV:CGFloat = 5 //space between items
-        let interItemSpacingH:CGFloat = 3
+        let interItemSpacingV:CGFloat = 3 //space between items
+        //let interItemSpacingH:CGFloat = 5
         
         let maxHeight = UIScreen.main.bounds.size.height // device's width
         let maxWidth = UIScreen.main.bounds.size.width
-        let numberOfItemsV: CGFloat = 3// items
+        let numberOfItemsV: CGFloat = 8// items
         let totalSpacingV: CGFloat = numberOfItemsV * interItemSpacingV
         
-        let numberOfItemsH: CGFloat = 5
-        let totalSpacingH: CGFloat = numberOfItemsH * interItemSpacingH
+        //let numberOfItemsH: CGFloat = 10
+        //let totalSpacingH: CGFloat = numberOfItemsH * interItemSpacingH
         
         
         let itemHeight: CGFloat = (maxHeight - totalSpacingV) / numberOfItemsV
-        let itemWidth: CGFloat = (maxWidth - totalSpacingH) / numberOfItemsH
+        //let itemWidth: CGFloat = (maxWidth - totalSpacingH) / numberOfItemsH
         
-        return CGSize(width: itemWidth, height: itemHeight)
+        return CGSize(width: maxWidth, height: itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+        return UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 5
+//    }
 }
 
 extension ViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else {
-            loadData()
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        guard !searchText.isEmpty else {
+//            loadData(with: "united")
+//            return
+//        }
+//        query = searchText
+//    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        guard let query = searchBar.text else {
             return
         }
-        query = searchText
+        loadData(with: query)
     }
 }
